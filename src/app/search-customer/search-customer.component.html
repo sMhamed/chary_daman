@@ -1,0 +1,123 @@
+<div class="row mb-4">
+    <div class="col-3 fw-bold ">Client</div>
+</div>
+<div class="row mb-4">
+    <div class="col-4">
+        <label for="name" class="form-label">Nom du Propriétaires ou SOCIETE</label>
+        <input type="text" class="form-control" id="name">
+    </div>
+    <div class="col-4">
+        <label for="adress" class="form-label">Adresse du Propriétaires OU SOCIETE</label>
+        <input type="text" class="form-control" id="adress" rows="3">
+    </div>
+    <div class="col-4">
+        <label for="telefone" class="form-label">Téléphone /FAX</label>
+        <input type="number" class="form-control" id="telefone">
+    </div>
+</div>
+
+<div class="row mb-4">
+    <div class="col-3 fw-bold ">Véhicule</div>
+</div>
+<div class="row mb-4">
+    <div class="col-4 mb-3">
+        <label for="vehicle-brand" class="form-label">Marque</label>
+        <input type="text" class="form-control" id="vehicle-brand">
+    </div>
+    <div class="col-4 mb-3">
+        <label for="vehicle-plate" class="form-label">N° Immatriculation</label>
+        <input type="text" class="form-control" id="vehicle-plate">
+    </div>
+    <div class="col-4 mb-3">
+        <label for="vehicle-chassis" class="form-label">N° Châssis</label>
+        <input type="text" class="form-control" id="vehicle-chassis">
+    </div>
+</div>
+
+<div class="row mb-4">
+    <div class="col-3 fw-bold ">Chronotachygraphe</div>
+</div>
+<div class="row mb-4">
+    <div class="col-4 mb-3">
+        <label for="tachygraphe-brand" class="form-label">Marque</label>
+        <input type="text" class="form-control" id="tachygraphe-brand">
+    </div>
+    <div class="col-4 mb-3">
+        <label for="tachygraphe-brand" class="form-label">Année de Fabrication</label>
+        <input type="number" class="form-control" id="tachygraphe-brand">
+    </div>
+    <div class="col-4 mb-3">
+        <label for="tachygraphe-number" class="form-label">N° Série</label>
+        <input type="number" class="form-control" id="tachygraphe-number">
+    </div>
+    <div class="col-4 mb-3">
+        <label for="tachygraphe-description" class="form-label">Description</label>
+        <input type="text" class="form-control" id="tachygraphe-description">
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-10"></div>
+    <div class="col-2">
+        <button class="btn btn-primary btn-lg mt-3" (click)="search()">Search</button>
+    </div>
+</div>
+
+<div class="row mb-4" *ngIf="showSearchResult">
+
+    <table class="table table-striped ">
+        <thead>
+            <tr>
+                <th>Nom du client</th>
+                <th>Adresse du client</th>
+                <th>Téléphone</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Client 1</td>
+                <td>Alle de Mellais No 5</td>
+                <td>0123456789</td>
+                <td>
+                    <div class="" ngbDropdown>
+                        <a class="nav-link" tabindex="0" ngbDropdownToggle id="navbarDropdown2" role="button">.. </a>
+                        <div ngbDropdownMenu aria-labelledby="navbarDropdown2" class="dropdown-menu dropdown-menu-end">
+                            <a ngbDropdownItem href="#" (click)="$event.preventDefault()">Afficher le client</a>
+                            <a ngbDropdownItem href="#" (click)="$event.preventDefault()" routerLink="/newOrder">Nouvelle commande</a>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>Client 2</td>
+                <td>Rue de Rouge No. 10</td>
+                <td>0123456789</td>
+                <td>
+                    <div class="" ngbDropdown>
+                        <a class="nav-link" tabindex="0" ngbDropdownToggle id="navbarDropdown2" role="button">.. </a>
+                        <div ngbDropdownMenu aria-labelledby="navbarDropdown2" class="dropdown-menu dropdown-menu-end">
+                            <a ngbDropdownItem href="#" (click)="$event.preventDefault()">Afficher le client</a>
+                            <a ngbDropdownItem href="#" (click)="$event.preventDefault()" routerLink="/newOrder">Nouvelle commande</a>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>Client 3</td>
+                <td>Rue de la Rue No. 50</td>
+                <td>0123456789</td>
+                <td>
+                    <div class="" ngbDropdown>
+                        <a class="nav-link" tabindex="0" ngbDropdownToggle id="navbarDropdown2" role="button">.. </a>
+                        <div ngbDropdownMenu aria-labelledby="navbarDropdown2" class="dropdown-menu dropdown-menu-end">
+                            <a ngbDropdownItem href="#" (click)="$event.preventDefault()">Afficher le client</a>
+                            <a ngbDropdownItem href="#" (click)="$event.preventDefault()" routerLink="/newOrder">Nouvelle commande</a>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>

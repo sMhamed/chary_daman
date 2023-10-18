@@ -9,8 +9,6 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { NewOrderComponent } from './new-order/new-order.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
-import { ServiceSelectionComponent } from './new-order/service-selection/service-selection.component';
-import { CustomerSelectionComponent } from './new-order/customer-selection/customer-selection.component';
 import { InstallationComponent } from './installation/installation.component';
 import { VehicleIdentificationComponent } from './vehicle-identification/vehicle-identification.component';
 import { InstallationTachygrapheComponent } from './installation/installation-tachygraphe/installation-tachygraphe.component';
@@ -26,6 +24,9 @@ import { VitesseTestComponent } from './verification/verification-metrologicalte
 import { VerificationTiresComponent } from './verification/verification-tires/verification-tires.component';
 import { LogoComponent } from './logo/logo.component';
 import { ReportComponent } from './report/report.component';
+import { NewCustomerComponent } from './new-customer/new-customer.component';
+import { SearchCustomerComponent } from './search-customer/search-customer.component';
+import { CustomerSelectionComponent } from './customer-selection/customer-selection.component';
 
 @NgModule({
   declarations: [
@@ -34,8 +35,7 @@ import { ReportComponent } from './report/report.component';
     NewOrderComponent,
     HeaderComponent,
     FooterComponent,
-    ServiceSelectionComponent,
-    CustomerSelectionComponent,
+
     InstallationComponent,
     VehicleIdentificationComponent,
     InstallationTachygrapheComponent,
@@ -50,7 +50,10 @@ import { ReportComponent } from './report/report.component';
     VitesseTestComponent,
     VerificationTiresComponent,
     LogoComponent,
-    ReportComponent
+    ReportComponent,
+    NewCustomerComponent,
+    SearchCustomerComponent,
+    CustomerSelectionComponent
   ],
   imports: [
     BrowserModule,

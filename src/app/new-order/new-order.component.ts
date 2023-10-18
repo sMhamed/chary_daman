@@ -10,44 +10,8 @@ type Step = 'serviceSelection' | 'customerSelection';
   templateUrl: './new-order.component.html',
   styleUrls: ['./new-order.component.scss']
 })
-export class NewOrderComponent implements OnInit{
-
-  private currentStepBs: BehaviorSubject<Step> = new BehaviorSubject<Step>('serviceSelection');
-  
-  public currentStep$: Observable<Step> = this.currentStepBs.asObservable();
-
-  public newOrderForm!: FormGroup;
+export class NewOrderComponent {
 
   constructor(private fb: FormBuilder) {}
 
-  ngOnInit() {
-    this.newOrderForm = this.fb.group({
-      serviceSelection: null,
-      customerInfo: null
-    });
-  }
-
-  subformInitialized(name: string, group: FormGroup) {
-    this.newOrderForm.setControl(name, group);
-  }
-
-  changeStep(currentStep: string, direction: 'forward' | 'back') {
-    switch(currentStep) {
-      case 'serviceSelectionStep':
-        if (direction === 'forward') {
-          this.currentStepBs.next('customerSelection');
-        }
-        break;
-      case 'customerSelectionStep':
-        if (direction === 'back') {
-          this.currentStepBs.next('serviceSelection');
-        }
-        break;
-    }
-  }
-
-  submitForm() {
-    const formValues = this.newOrderForm.value;
-    // submit the form with a service
-}
 }

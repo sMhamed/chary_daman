@@ -28,7 +28,7 @@ export class LoginComponent {
       if (!user){
         this.authenticationError = true;
       } else {
-        this.router.navigateByUrl('/newOrder');
+        this.router.navigateByUrl('/customerSelection');
       }
   }
 

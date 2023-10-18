@@ -5,9 +5,11 @@ import { NewOrderComponent } from './new-order/new-order.component';
 import { InstallationComponent } from './installation/installation.component';
 import { VerificationComponent } from './verification/verification.component';
 import { ReportComponent } from './report/report.component';
+import { CustomerSelectionComponent } from './customer-selection/customer-selection.component';
 
 const routes: Routes = [
   {path: '', component: LoginComponent},
+  {path: 'customerSelection', component: CustomerSelectionComponent},
   {path: 'newOrder', component: NewOrderComponent},
   {path: 'installation', component: InstallationComponent},
   {path: 'verification', component: VerificationComponent},

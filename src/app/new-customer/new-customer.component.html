@@ -13,7 +13,7 @@
                         <textarea class="form-control" id="adress" rows="3"></textarea>
                     </div>
                     <div class="mb-3">
-                        <label for="telefone" class="form-label">Nom du Propriétaires ou SOCIETE</label>
+                        <label for="telefone" class="form-label">Téléphone/FAX</label>
                         <input type="number" class="form-control" id="telefone">
                     </div>
                 </div>
@@ -78,14 +78,13 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-8">
-
-        </div>
+        <div class="col-6"></div>
         <div class="col-2">
-            <button class="btn btn-primary mt-3" (click)="doChangeStep('back')">Back</button>
+            <button class="btn btn-primary mt-3" (click)="submit()">Ajouter un client</button>
         </div>
-        <div class="col-2">
-            <button class="btn btn-primary mt-3" routerLink="/installation"> Next</button>
+        <div class="col-4">
+            <button class="btn btn-primary mt-3" (click)="submit()" routerLink="/newOrder">Ajouter un client et créer une nouvelle commande</button>
         </div>
+        
     </div>
 </div>
