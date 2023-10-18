@@ -1,0 +1,18 @@
+<app-header></app-header>
+<ng-container [ngSwitch]="currentStep$ | async">
+    <app-service-selection 
+      *ngSwitchCase="'serviceSelection'" 
+      [startingForm]="newOrderForm.get('serviceSelection')!.value" 
+      (subformInitialized)="subformInitialized('serviceSelection', $event)" 
+      (changeStep)="changeStep('serviceSelectionStep', $event)"
+    ></app-service-selection>
+   <app-customer-selection 
+      *ngSwitchCase="'customerSelection'" 
+      [startingForm]="newOrderForm.get('customerSelection')!.value" 
+      (subformInitialized)="subformInitialized('customerSelection', $event)" 
+      (changeStep)="changeStep('customerSelectionStep', 'back')"
+      (submitForm)="submitForm()"
+    ></app-customer-selection >
+  </ng-container>
+
+<app-footer></app-footer>

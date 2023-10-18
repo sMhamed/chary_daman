@@ -1,0 +1,111 @@
+<app-header></app-header>
+<div class="container">
+    <div class="row mb-4">
+        <div class="col-2">
+            <span class="fw-bold ">N° de la fiche</span>
+        </div>
+        <div class="col-3">
+            1254 / 2023
+        </div>
+    </div>
+    <hr/>
+    <div class="row mb-4">
+        <div class="col-2 fw-bold">
+            <label for="temperature" class="form-label">Température</label>
+        </div>
+        <div class="col-1">
+            <div class="input-group">
+                <input type="text" class="form-control" aria-label="Ind 1" aria-describedby="temperature">
+                <span class="input-group-text" id="temperature">°</span>
+            </div>
+        </div>
+    </div>
+    <hr/>
+    <div class="row mb-4  align-items-center">
+        <div class="col-2 ">
+            <span class="fw-bold">Véhicule à vide</span>
+        </div>
+        <div class="col-4">
+            <div class="form-check mb-3">
+                <input class="form-check-input" type="radio" name="empty-vehicle-conform-radio" id="empty-vehicle-conform">
+                <label class="form-check-label" for="empty-vehicle-conform">
+                    Conforme
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="empty-vehicle-conform-radio" id="empty-vehicle-nonconform">
+                <label class="form-check-label" for="empty-vehicle-nonconform">
+                    Non conforme
+                </label>
+            </div>
+        </div>
+        <div class="col-2 ">
+            <span class="fw-bold">Vahicule en bon état de marche</span>
+        </div>
+        <div class="col-4">
+            <div class="form-check mb-3">
+                <input class="form-check-input" type="radio" name="empty-vehicle-conform-radio" id="empty-vehicle-conform">
+                <label class="form-check-label" for="empty-vehicle-conform">
+                    Conforme
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="empty-vehicle-conform-radio" id="empty-vehicle-nonconform">
+                <label class="form-check-label" for="empty-vehicle-nonconform">
+                    Non conforme
+                </label>
+            </div>
+        </div>
+    </div>
+    <hr/>
+    <div class="row mb-4 ">
+        <div class="col-2 ">
+            <span class="fw-bold">Moyens utiilisés</span>
+        </div>
+        <div class="col-2">
+            <div class="form-check mb-3">
+                <input class="form-check-input" type="radio" name="type-vehicle-conform-radio" id="ban-vehicle">
+                <label class="form-check-label" for="ban-vehicle">
+                    Ban
+                </label>
+            </div>
+        </div>
+        <div class="col-2">
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="type-vehicle-conform-radio" id="truck-vehicle">
+                <label class="form-check-label" for="truck-vehicle">
+                    Piste
+                </label>
+            </div>
+        </div>
+    </div>
+
+    <div ngbAccordion>
+        <div ngbAccordionItem [collapsed]="false">
+            <h2 ngbAccordionHeader>
+                <button ngbAccordionButton>IDENTIFICATION DU VÉHICULE</button>
+            </h2>
+            <div ngbAccordionCollapse>
+                <div ngbAccordionBody>
+                    <ng-template>
+                        <app-vehicle-identification></app-vehicle-identification>
+                    </ng-template>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<app-verification-tachygraphe></app-verification-tachygraphe>
+<app-verification-metrologicaltest></app-verification-metrologicaltest>
+<app-verification-tires></app-verification-tires>
+
+<div class="row">
+    <div class="col-10">
+    </div>
+    <div class="col-2">
+        <button class="btn btn-primary mt-3" routerLink="/report"> Next</button>
+    </div>
+</div>
+
+<app-footer></app-footer>

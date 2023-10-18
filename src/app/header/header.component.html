@@ -1,0 +1,42 @@
+<nav class="navbar navbar-expand-lg navbar-dark tachy-navbar mb-4">
+
+	<div class="container-fluid">
+
+		<span class="navbar-brand" style="width: 13%;">
+			<app-logo color="#c5a827"></app-logo>
+		</span>
+
+		<button class="navbar-toggler" type="button" aria-controls="navbarContent" [attr.aria-expanded]="!collapsed"
+			aria-label="Toggle navigation" (click)="collapsed = !collapsed">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<div class="navbar-collapse" [class.collapse]="collapsed" id="navbarContent">
+			<ul class="navbar-nav ms-auto">
+				<li class="nav-item">
+					<a class="nav-link active" aria-current="page" href="#">Home</a>
+				</li>
+
+				<li class="nav-item" ngbDropdown>
+					<a class="nav-link" tabindex="0" ngbDropdownToggle id="navbarDropdown2" role="button"> Inbox </a>
+					<div ngbDropdownMenu aria-labelledby="navbarDropdown2" class="dropdown-menu dropdown-menu-end">
+						<a ngbDropdownItem href="#" (click)="$event.preventDefault()">Show Inbox</a>
+						<a ngbDropdownItem href="#" (click)="$event.preventDefault()">Next Task</a>
+					</div>
+				</li>
+
+				<li class="nav-item" ngbDropdown display="dynamic" placement="bottom-end">
+					<a class="nav-link" tabindex="0" ngbDropdownToggle id="navbarDropdown3" role="button"> {{user.name}}
+					</a>
+					<div ngbDropdownMenu aria-labelledby="navbarDropdown3" class="dropdown-menu">
+						<a ngbDropdownItem href="#" (click)="$event.preventDefault()">New Order</a>
+						<a ngbDropdownItem href="#" (click)="$event.preventDefault()">Settings</a>
+						<a ngbDropdownItem href="#" (click)="$event.preventDefault()">Logout</a>
+					</div>
+				</li>
+			</ul>
+		</div>
+
+	</div>
+
+</nav>

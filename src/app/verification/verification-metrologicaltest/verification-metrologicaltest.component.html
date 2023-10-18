@@ -1,0 +1,298 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12 ">
+            <div ngbAccordion>
+                <div ngbAccordionItem [collapsed]="false">
+                    <h2 ngbAccordionHeader>
+                        <button ngbAccordionButton>ESSAI METROLOGIQUE</button>
+                    </h2>
+                    <div ngbAccordionCollapse>
+                        <div ngbAccordionBody>
+                            <ng-template>
+                                <!-- ===== 1 ====== -->
+                                <div class="row mb-4">
+                                    <span class="fw-bold ">1- Test Vitesse & activités (EMT) : (+ / - 4 km/h pour la
+                                        vitesse)</span>
+                                </div>
+                                <app-vitesse-test [velocities]="'125 / 140 / 180'"></app-vitesse-test>
+                                <app-vitesse-test [velocities]="'0'"></app-vitesse-test>
+                                <app-vitesse-test [velocities]="'40'"></app-vitesse-test>
+                                <app-vitesse-test [velocities]="'70 / 80 / 100'"></app-vitesse-test>
+                                <app-vitesse-test [velocities]="'100 / 120 / 160'"></app-vitesse-test>
+
+                                <!-- ===== 2 ===== -->
+                                <div class="row mt-5 mb-4">
+                                    <span class="fw-bold ">2- Test Horloge (EMT) : (+ / - 2 minutes par jour avec un
+                                        max. de 10 minutes par 7 jours)</span>
+                                </div>
+                                <div class="row mb-5">
+                                    <div class="col-1">
+                                        <label for="error-sec" class="form-label">Erreur Sec</label>
+                                    </div>
+                                    <div class="col-3">
+                                        <input type="text" class="form-control" id="error-sec">
+                                    </div>
+                                    <div class="col-1">
+                                        <label for="error-min" class="form-label">Erreur Min</label>
+                                    </div>
+                                    <div class="col-3">
+                                        <input type="text" class="form-control" id="error-min">
+                                    </div>
+                                    <div class="col-2">
+                                        <div class="form-check mb-3">
+                                            <input class="form-check-input" type="radio" name="error-conform-radio"
+                                                id="error-conform">
+                                            <label class="form-check-label" for="error-conform">Conforme</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-2">
+
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="error-conform-radio"
+                                                id="error-nonconform">
+                                            <label class="form-check-label" for="error-nonconform">Non conforme</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- ===== 3 ===== -->
+                                <div class="row mb-4">
+                                    <span class="fw-bold ">3- Contrôle de disque</span>
+                                </div>
+                                <div class="row mb-3">
+                                    <div class="col-4">
+                                        Radialité du stylet vitesse
+                                    </div>
+                                    <div class="col-2">
+                                        &lt; 1min
+                                    </div>
+                                    <div class="col-2">
+                                        Alidade
+                                    </div>
+                                    <div class="col-2">
+                                        <div class="form-check mb-3">
+                                            <input class="form-check-input" type="radio" name="error-conform-radio"
+                                                id="error-conform">
+                                            <label class="form-check-label" for="error-conform">Conforme</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-2">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="error-conform-radio"
+                                                id="error-nonconform">
+                                            <label class="form-check-label" for="error-nonconform">Non conforme</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <div class="col-4">
+                                        Alignements des stylets vitesse, activité, distance
+                                    </div>
+                                    <div class="col-2">
+                                        &lt; 3min 30s
+                                    </div>
+                                    <div class="col-2">
+                                        Alidade
+                                    </div>
+                                    <div class="col-2">
+                                        <div class="form-check mb-3">
+                                            <input class="form-check-input" type="radio" name="error-conform-radio"
+                                                id="error-conform">
+                                            <label class="form-check-label" for="error-conform">Conforme</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-2">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="error-conform-radio"
+                                                id="error-nonconform">
+                                            <label class="form-check-label" for="error-nonconform">Non conforme</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <div class="col-4">
+                                        Position du stylet distance
+                                    </div>
+                                    <div class="col-2">
+                                        Canal Alidade
+                                    </div>
+                                    <div class="col-2">
+                                        Alidade
+                                    </div>
+                                    <div class="col-2">
+                                        <div class="form-check mb-3">
+                                            <input class="form-check-input" type="radio" name="error-conform-radio"
+                                                id="error-conform">
+                                            <label class="form-check-label" for="error-conform">Conforme</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-2">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="error-conform-radio"
+                                                id="error-nonconform">
+                                            <label class="form-check-label" for="error-nonconform">Non conforme</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <div class="col-4">
+                                        Correspondance Horloge et disque
+                                    </div>
+                                    <div class="col-2">
+                                        &lt; 6min
+                                    </div>
+                                    <div class="col-2">
+                                        Visuelle
+                                    </div>
+                                    <div class="col-2">
+                                        <div class="form-check mb-3">
+                                            <input class="form-check-input" type="radio" name="error-conform-radio"
+                                                id="error-conform">
+                                            <label class="form-check-label" for="error-conform">Conforme</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-2">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="error-conform-radio"
+                                                id="error-nonconform">
+                                            <label class="form-check-label" for="error-nonconform">Non conforme</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <div class="col-4">
+                                        Contröle des vitesses
+                                    </div>
+                                    <div class="col-2">
+                                        &lt; ou - 3Max
+                                    </div>
+                                    <div class="col-2">
+                                        Alidade
+                                    </div>
+                                    <div class="col-2">
+                                        <div class="form-check mb-3">
+                                            <input class="form-check-input" type="radio" name="error-conform-radio"
+                                                id="error-conform">
+                                            <label class="form-check-label" for="error-conform">Conforme</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-2">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="error-conform-radio"
+                                                id="error-nonconform">
+                                            <label class="form-check-label" for="error-nonconform">Non conforme</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- ===== 4 ===== -->
+                                <div class="row mb-4">
+                                    <span class="fw-bold ">4- Lancement de la mesure: déterminer
+                                        -le coefficient caractéristique "W" et "L* (corriger) du véhicule</span>
+                                </div>
+                                <div class="row mb-3">
+                                    <div class="col-2">
+                                        <div class="input-group">
+                                            <span class="input-group-text" id="w1">W1</span>
+                                            <input type="text" class="form-control" aria-describedby="w1">
+                                        </div>
+                                    </div>
+                                    <div class="col-2">
+                                        <div class="input-group">
+                                            <span class="input-group-text" id="w2">W2</span>
+                                            <input type="text" class="form-control" aria-describedby="w2">
+                                        </div>
+                                    </div>
+                                    <div class="col-2">
+                                        <div class="input-group">
+                                            <span class="input-group-text" id="w3">W3</span>
+                                            <input type="text" class="form-control" aria-describedby="w3">
+                                        </div>
+                                    </div>
+                                    <div class="col-2">
+                                        <div class="input-group">
+                                            <span class="input-group-text" id="w-moyen">W Moyen</span>
+                                            <input type="text" class="form-control" aria-describedby="w-moyen">
+                                        </div>
+                                    </div>
+                                    <div class="col-2">
+                                        <div class="input-group">
+                                            <span class="input-group-text" id="l-moyen">L Moyen</span>
+                                            <input type="text" class="form-control" aria-describedby="l-moyen">
+                                        </div>
+                                    </div>
+                                    <div class="col-2">
+                                        <div class="input-group">
+                                            <span class="input-group-text" id="constant-k">Constante K</span>
+                                            <input type="text" class="form-control" aria-describedby="constant-k">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mb-5">
+                                    <div class="col-3">
+                                        <span class="fw-medium  ">Véhicule hors gabarie</span>
+                                    </div>
+                                    <div class="col-3">
+                                        <div class="input-group">
+                                            <span class="input-group-text" id="l-drotte">L Drotte</span>
+                                            <input type="text" class="form-control" aria-describedby="l-drotte">
+                                        </div>
+                                    </div>
+                                    <div class="col-3">
+                                        <div class="input-group">
+                                            <span class="input-group-text" id="l-gauche">L Gauche</span>
+                                            <input type="text" class="form-control" aria-describedby="l-gauche">
+                                        </div>
+                                    </div>
+                                    <div class="col-3">
+                                        <div class="input-group">
+                                            <span class="input-group-text" id="l-moyen">L Moyen</span>
+                                            <input type="text" class="form-control" aria-describedby="l-moyen">
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- ===== 5 ===== -->
+                                <div class="row mb-4">
+                                    <span class="fw-bold ">5- Contrôle final de 1000m : (* / - 2% de la distance parcourue (au moins égale à 1 km))</span>
+                                </div>
+                                <div class="row mb-5 align-items-center ">
+                                    <div class="col-2">
+                                        <label for="error-sec" class="form-label">Distance Measurée</label>
+                                    </div>
+                                    <div class="col-1">
+                                        <input type="text" class="form-control" id="error-sec">
+                                    </div>
+                                    <div class="col-2">
+                                        <label for="error-min" class="form-label">Distance parcourues</label>
+                                    </div>
+                                    <div class="col-1">
+                                        <input type="text" class="form-control" id="error-min">
+                                    </div>
+                                    <div class="col-1">
+                                        <label for="error-min" class="form-label">Erreur</label>
+                                    </div>
+                                    <div class="col-1">
+                                        <input type="text" class="form-control" id="error-min">
+                                    </div>
+                                    <div class="col-2">
+                                        <div class="form-check mb-3">
+                                            <input class="form-check-input" type="radio" name="error-conform-radio"
+                                                id="error-conform">
+                                            <label class="form-check-label" for="error-conform">Conforme</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-2">
+
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="error-conform-radio"
+                                                id="error-nonconform">
+                                            <label class="form-check-label" for="error-nonconform">Non conforme</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </ng-template>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

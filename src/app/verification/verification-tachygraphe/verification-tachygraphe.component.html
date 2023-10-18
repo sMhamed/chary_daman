@@ -1,0 +1,108 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12 ">
+            <div ngbAccordion>
+                <div ngbAccordionItem [collapsed]="false">
+                    <h2 ngbAccordionHeader>
+                        <button ngbAccordionButton>CHRONOTACHYGRAPHE</button>
+                    </h2>
+                    <div ngbAccordionCollapse>
+                        <div ngbAccordionBody>
+                            <ng-template>
+                                <app-tachygraphe-identification></app-tachygraphe-identification>
+                                <div class="container mt-5">
+                                    <hr/>
+                                    <div class="row mb-3">
+                                        <div class="col-8">
+                                            Carnet métrologique selon larrête 2399-20
+                                        </div>
+                                        <div class="col-2">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="metrological-logbook-conform-radio" id="metrological-logbook-conform">
+                                                <label class="form-check-label" for="metrological-logbook-conform">
+                                                    Conforme
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-2">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="metrological-logbook-conform-radio" id="metrological-logbook-nonconform">
+                                                <label class="form-check-label" for="metrological-logbook-nonconform">
+                                                    Non conforme
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <div class="col-8">
+                                            Scellement de I'installation
+                                        </div>
+                                        <div class="col-2">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="sealing-conform-radio" id="sealing-conform">
+                                                <label class="form-check-label" for="sealing-conform">
+                                                    Conforme
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-2">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="sealing-conform-radio" id="sealing-nonconform">
+                                                <label class="form-check-label" for="sealing-nonconform">
+                                                    Non conforme
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr/>
+                                    <div class="row mb-3">
+                                        <div class="col-8">
+                                            La conformité de la plaque signalétique au carnet métrologique
+                                        </div>
+                                        <div class="col-2">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="plate-conform-radio" id="plate-conform">
+                                                <label class="form-check-label" for="plate-conform">
+                                                    Conforme
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-2">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="plate-conform-radio" id="plate-nonconform">
+                                                <label class="form-check-label" for="plate-nonconform">
+                                                    Non conforme
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <div class="col-8">
+                                            existence de la marque de la verification premiére
+                                        </div>
+                                        <div class="col-2">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="initial-verification-conform-radio" id="initial-verification-conform">
+                                                <label class="form-check-label" for="initial-verification-conform">
+                                                    Conforme
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-2">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="initial-verification-conform-radio" id="initial-verification-nonconform">
+                                                <label class="form-check-label" for="initial-verification-nonconform">
+                                                    Non conforme
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </ng-template>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
