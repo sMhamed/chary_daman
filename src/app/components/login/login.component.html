@@ -1,36 +1,35 @@
-<div class="container" [formGroup]="loginForm">
-  <div class="row">
-    <div class="col-md-6 offset-md-3">
-      <div class="card my-5">
+<div class="row" [formGroup]="loginForm">
+  <div class="col-md-6 offset-md-3">
+    <div class="card my-5">
 
-        <div class="card-body cardbody-color p-lg-5">
+      <div class="card-body cardbody-color p-lg-5">
 
-          <div style="transform: scale(0.7);">
-            <app-logo color="#0e1d36"></app-logo>
-          </div>
+        <div style="transform: scale(0.7);">
+          <app-logo color="#0e1d36"></app-logo>
+        </div>
 
-          <div class="mb-3">
-            <input type="text" class="form-control" id="Username" placeholder="User Name"
-              formControlName="username" (input)="clearError()">
-          </div>
-          <div class="mb-3">
-            <input type="password" class="form-control" id="password" placeholder="password" formControlName="password" (input)="clearError()">
-          </div>
-          <div class="text-center">
-            <button type="submit" class="btn btn-color px-5 mb-5 w-100" (click)="login()"
-              [disabled]="!loginForm.valid">Login</button>
-          </div>
-          <div class="text-danger text-center mb-5 " *ngIf="authenticationError">
-            Authentication error. Please check your credentials.
-          </div>
+        <div class="mb-3">
+          <input type="text" class="form-control" id="Username" placeholder="User Name" formControlName="username"
+            (input)="clearError()">
+        </div>
+        <div class="mb-3">
+          <input type="password" class="form-control" id="password" placeholder="password" formControlName="password"
+            (input)="clearError()">
+        </div>
+        <div class="text-center">
+          <button type="submit" class="btn btn-color px-5 mb-5 w-100" (click)="login()"
+            [disabled]="!loginForm.valid">Login</button>
+        </div>
+        <div class="text-danger text-center mb-5 " *ngIf="authenticationError">
+          Authentication error. Please check your credentials.
+        </div>
 
-          <div id="emailHelp" class="form-text text-center mb-5 text-dark">Not
-            Registered? <a href="#" class="text-dark fw-bold"> Create an
-              Account</a>
-          </div>
+        <div id="emailHelp" class="form-text text-center mb-5 text-dark">Not
+          Registered? <a href="#" class="text-dark fw-bold"> Create an
+            Account</a>
         </div>
       </div>
-
     </div>
+
   </div>
 </div>

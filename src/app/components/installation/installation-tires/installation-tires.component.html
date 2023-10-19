@@ -1,55 +1,53 @@
-<div class="container">
-    <div class="row">
-        <div class="col-12 ">
-            <div ngbAccordion>
-                <div ngbAccordionItem [collapsed]="false">
-                    <h2 ngbAccordionHeader>
-                        <button ngbAccordionButton>Pneumatiques (roues motrices)</button>
-                    </h2>
-                    <div ngbAccordionCollapse>
-                        <div ngbAccordionBody>
-                            <ng-template>
-                                <div class="row mb-4">
-                                    <div class="col-6">
-                                        <app-tire-input [tireLocation]="'Roue Gouche Exterieur'"></app-tire-input>
-                                    </div>
-                                    <div class="col-6">
-                                        <app-tire-input [tireLocation]="'Roue Gouche Interieur'"></app-tire-input>
+<div class="row">
+    <div class="col-12 ">
+        <div ngbAccordion>
+            <div ngbAccordionItem [collapsed]="false">
+                <h2 ngbAccordionHeader>
+                    <button ngbAccordionButton>Pneumatiques (roues motrices)</button>
+                </h2>
+                <div ngbAccordionCollapse>
+                    <div ngbAccordionBody>
+                        <ng-template>
+                            <div class="row mb-4">
+                                <div class="col-6">
+                                    <app-tire-input [tireLocation]="'Roue Gouche Exterieur'"></app-tire-input>
+                                </div>
+                                <div class="col-6">
+                                    <app-tire-input [tireLocation]="'Roue Gouche Interieur'"></app-tire-input>
+                                </div>
+                            </div>
+                            <div class="row mb-5">
+                                <div class="col-6">
+                                    <app-tire-input [tireLocation]="'Roue Droite Interieur'"></app-tire-input>
+                                </div>
+                                <div class="col-6">
+                                    <app-tire-input [tireLocation]="'Roue Droite Exterieur'"></app-tire-input>
+                                </div>
+                            </div>
+                            <div class="row mb-2">
+                                <div class="col-6 ">
+                                    <span class="fw-bold ">Etat de la conformité des roues</span>
+                                </div>
+                                <div class="col-3">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="tires-conform-radio"
+                                            id="tires-conform">
+                                        <label class="form-check-label" for="tires-conform">
+                                            Conforme
+                                        </label>
                                     </div>
                                 </div>
-                                <div class="row mb-5">
-                                    <div class="col-6">
-                                        <app-tire-input [tireLocation]="'Roue Droite Interieur'"></app-tire-input>
-                                    </div>
-                                    <div class="col-6">
-                                        <app-tire-input [tireLocation]="'Roue Droite Exterieur'"></app-tire-input>
-                                    </div>
-                                </div>
-                                <div class="row mb-2">
-                                    <div class="col-6 ">
-                                        <span class="fw-bold ">Etat de la conformité des roues</span>
-                                    </div>
-                                    <div class="col-3">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="tires-conform-radio"
-                                                id="tires-conform">
-                                            <label class="form-check-label" for="tires-conform">
-                                                Conforme
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="col-3">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="tires-conform-radio"
-                                                id="tires-nonconform">
-                                            <label class="form-check-label" for="tires-nonconform">
-                                                Non conforme
-                                            </label>
-                                        </div>
+                                <div class="col-3">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="tires-conform-radio"
+                                            id="tires-nonconform">
+                                        <label class="form-check-label" for="tires-nonconform">
+                                            Non conforme
+                                        </label>
                                     </div>
                                 </div>
-                            </ng-template>
-                        </div>
+                            </div>
+                        </ng-template>
                     </div>
                 </div>
             </div>
