@@ -10,6 +10,6 @@ export class HeaderComponent {
   collapsed = true;
   
   constructor() {
-    this.user =JSON.parse(localStorage.getItem('session') ?? '??')
+    this.user =JSON.parse(localStorage.getItem('session') ?? '{}')
   }
 }
