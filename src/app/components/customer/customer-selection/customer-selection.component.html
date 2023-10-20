@@ -1,36 +1,38 @@
-<div class="row mb-3">
-    <div class="col-12 ">
-        <div ngbAccordion>
-            <div ngbAccordionItem [collapsed]="false">
-                <h2 ngbAccordionHeader>
-                    <button ngbAccordionButton>Search Customer</button>
-                </h2>
-                <div ngbAccordionCollapse>
-                    <div ngbAccordionBody>
-                        <ng-template>
-                            <app-search-customer></app-search-customer>
-                        </ng-template>
+<app-main-template>
+    <div class="row mb-3">
+        <div class="col-12 ">
+            <div ngbAccordion>
+                <div ngbAccordionItem [collapsed]="false">
+                    <h2 ngbAccordionHeader>
+                        <button ngbAccordionButton>Search Customer</button>
+                    </h2>
+                    <div ngbAccordionCollapse>
+                        <div ngbAccordionBody>
+                            <ng-template>
+                                <app-search-customer></app-search-customer>
+                            </ng-template>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-<div class="row mb-3">
-    <div class="col-12 ">
-        <div ngbAccordion>
-            <div ngbAccordionItem [collapsed]="true">
-                <h2 ngbAccordionHeader>
-                    <button ngbAccordionButton>New Customer</button>
-                </h2>
-                <div ngbAccordionCollapse>
-                    <div ngbAccordionBody>
-                        <ng-template>
-                            <app-new-customer></app-new-customer>
-                        </ng-template>
+    <div class="row mb-3">
+        <div class="col-12 ">
+            <div ngbAccordion>
+                <div ngbAccordionItem [collapsed]="true">
+                    <h2 ngbAccordionHeader>
+                        <button ngbAccordionButton>New Customer</button>
+                    </h2>
+                    <div ngbAccordionCollapse>
+                        <div ngbAccordionBody>
+                            <ng-template>
+                                <app-new-customer></app-new-customer>
+                            </ng-template>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
+</app-main-template>

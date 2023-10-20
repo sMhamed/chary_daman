@@ -1,49 +1,54 @@
-<div class="row mb-4">
-    <div class="col-2">
-        <span class="fw-bold ">N° de la fiche</span>
+<app-main-template>
+    <div class="row mb-4">
+        <div class="col-2">
+            <span class="fw-bold ">N° de la fiche</span>
+        </div>
+        <div class="col-3">
+            1254 / 2023
+        </div>
     </div>
-    <div class="col-3">
-        1254 / 2023
+    <div class="row mb-4">
+        <div class="col-2 fw-bold">
+            <label for="temperature" class="form-label">Température</label>
+        </div>
+        <div class="col-2">
+            <input type="text" class="form-control" id="temperature">
+        </div>
     </div>
-</div>
-<div class="row mb-4">
-    <div class="col-2 fw-bold">
-        <label for="temperature" class="form-label">Température</label>
-    </div>
-    <div class="col-2">
-        <input type="text" class="form-control" id="temperature">
-    </div>
-</div>
-<div class="row">
-    <div class="col-12 ">
-        <div ngbAccordion>
-            <div ngbAccordionItem [collapsed]="false">
-                <h2 ngbAccordionHeader>
-                    <button ngbAccordionButton>IDENTIFICATION DU VÉHICULE</button>
-                </h2>
-                <div ngbAccordionCollapse>
-                    <div ngbAccordionBody>
-                        <ng-template>
-                            <app-vehicle-identification></app-vehicle-identification>
-                        </ng-template>
+    <div class="row">
+        <div class="col-12 ">
+            <div ngbAccordion>
+                <div ngbAccordionItem [collapsed]="false">
+                    <h2 ngbAccordionHeader>
+                        <button ngbAccordionButton>IDENTIFICATION DU VÉHICULE</button>
+                    </h2>
+                    <div ngbAccordionCollapse>
+                        <div ngbAccordionBody>
+                            <ng-template>
+                                <app-vehicle-identification></app-vehicle-identification>
+                            </ng-template>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-<app-installation-tachygraphe></app-installation-tachygraphe>
+    <app-installation-tachygraphe></app-installation-tachygraphe>
 
-<app-installation-vehicle-verification></app-installation-vehicle-verification>
+    <app-installation-vehicle-verification></app-installation-vehicle-verification>
 
-<app-installation-tires></app-installation-tires>
+    <app-installation-tires></app-installation-tires>
 
-<app-installation-simulation></app-installation-simulation>
+    <app-installation-simulation></app-installation-simulation>
 
-<div class="row">
-    <div class="col-11">
+    <div class="row">
+        <div class="col-1">
+            <button class="btn btn-primary btn-lg mt-3" routerLink="/newOrder"> Back </button>
+        </div>
+        <div class="col-9">
+        </div>
+        <div class="col-2">
+            <button class="btn btn-primary btn-lg mt-3 float-end " routerLink="/verification"> Next</button>
+        </div>
     </div>
-    <div class="col-1">
-        <button class="btn btn-primary btn-lg mt-3" routerLink="/verification"> Next</button>
-    </div>
-</div>
+</app-main-template>

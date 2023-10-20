@@ -1,186 +1,192 @@
-<div class="row mb-4">
-    <div class="col-2">
-        <span class="fw-bold ">N°DE CERTIFICAT</span>
+<app-main-template>
+    <div class="row mb-4">
+        <div class="col-2">
+            <span class="fw-bold ">N°DE CERTIFICAT</span>
+        </div>
+        <div class="col-3">
+            1254 / 2023
+        </div>
     </div>
-    <div class="col-3">
-        1254 / 2023
-    </div>
-</div>
-<div ngbAccordion>
-    <div ngbAccordionItem [collapsed]="false">
-        <h2 ngbAccordionHeader>
-            <button ngbAccordionButton>VALIDATION</button>
-        </h2>
-        <div ngbAccordionCollapse>
-            <div ngbAccordionBody>
-                <ng-template>
-                    <div class="row mb-4">
-                        <div class="col">
-                            <h5 class="fw-bold ">IDENTIFICATION VEHICULE</h5>
+    <div ngbAccordion>
+        <div ngbAccordionItem [collapsed]="false">
+            <h2 ngbAccordionHeader>
+                <button ngbAccordionButton>VALIDATION</button>
+            </h2>
+            <div ngbAccordionCollapse>
+                <div ngbAccordionBody>
+                    <ng-template>
+                        <div class="row mb-4">
+                            <div class="col">
+                                <h5 class="fw-bold ">IDENTIFICATION VEHICULE</h5>
+                            </div>
                         </div>
-                    </div>
-                    <app-vehicle-identification></app-vehicle-identification>
-                    <div class="row mb-4 mt-5">
-                        <div class="col">
-                            <h5 class="fw-bold ">IDENTIFICATION CHRONOTACHYGRAPHE</h5>
+                        <app-vehicle-identification></app-vehicle-identification>
+                        <div class="row mb-4 mt-5">
+                            <div class="col">
+                                <h5 class="fw-bold ">IDENTIFICATION CHRONOTACHYGRAPHE</h5>
+                            </div>
                         </div>
-                    </div>
-                    <app-tachygraphe-identification></app-tachygraphe-identification>
-                </ng-template>
+                        <app-tachygraphe-identification></app-tachygraphe-identification>
+                    </ng-template>
+                </div>
             </div>
         </div>
     </div>
-</div>
-<div ngbAccordion>
-    <div ngbAccordionItem [collapsed]="false">
-        <h2 ngbAccordionHeader>
-            <button ngbAccordionButton>CONTROLES & DECISIONS</button>
-        </h2>
-        <div ngbAccordionCollapse>
-            <div ngbAccordionBody>
-                <ng-template>
+    <div ngbAccordion>
+        <div ngbAccordionItem [collapsed]="false">
+            <h2 ngbAccordionHeader>
+                <button ngbAccordionButton>CONTROLES & DECISIONS</button>
+            </h2>
+            <div ngbAccordionCollapse>
+                <div ngbAccordionBody>
+                    <ng-template>
 
-                    <table class="table table-striped table-bordered align-middle report-table ">
-                        <thead >
-                            <tr>
-                                <th rowspan="2" scope="col" class="text-center align-middle ">CONTROLE</th>
-                                <th rowspan="2" scope="col" class="text-center align-middle">VALEUR</th>
-                                <th colspan="2" class="text-center ">EMT</th>
-                                <th colspan="2">CONFORMITE</th>
-                            </tr>
-                            <tr>
-                                <th class="text-center ">VAI</th>
-                                <th class="text-center ">VP</th>
-                                <th>OUI</th>
-                                <th>NON</th>
-                            </tr>
-                        </thead>
-                        <tbody class="table-group-divider">
-                            <tr>
-                                <th scope="row">Pré-requis</th>
-                                <td colspan="3">Contrôle des conditions normales d'essai</td>
-                                <td><input type="radio" name="prerequis-radio"></td>
-                                <td><input type="radio" name="prerequis-radio"></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">Examen administratif</th>
-                                <td colspan="3">Contrôle administratif</td>
-                                <td><input type="radio" name="administratif-radio"></td>
-                                <td><input type="radio" name="administratif-radio"></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">Plombages</th>
-                                <td colspan="3">Contrôle des plombages de l'installation et du tachygraphe</td>
-                                <td><input type="radio" name="plombages-radio"></td>
-                                <td><input type="radio" name="plombages-radio"></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">Plaquette d'installation</th>
-                                <td colspan="3">Contrôle de la plaquette d'installation et de son plombage</td>
-                                <td><input type="radio" name="plaquette-radio"></td>
-                                <td><input type="radio" name="plaquette-radio"></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">Horloge</th>
-                                <td><input type="text"></td>
-                                <td colspan="2">2min /jou 10min/7</td>
-                                <td><input type="radio" name="horloge-radio"></td>
-                                <td><input type="radio" name="horloge-radio"></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">Distance (1000m)</th>
-                                <td><input type="text"></td>
-                                <td>+2%</td>
-                                <td>+4%</td>
-                                <td><input type="radio" name="distance-radio"></td>
-                                <td><input type="radio" name="distance-radio"></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">Tests de vitesse</th>
-                                <td><input type="text"></td>
-                                <td>+4 Km/h</td>
-                                <td>+6 Km/h</td>
-                                <td><input type="radio" name="vitesse-radio"></td>
-                                <td><input type="radio" name="vitesse-radio"></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">Test d'activité</th>
-                                <td colspan="3">Contrôle de l'activité sur le disque d'essai</td>
-                                <td><input type="radio" name="activity-radio"></td>
-                                <td><input type="radio" name="activity-radio"></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">[La circonférence « | « des roues motrices</th>
-                                <td>
-                                    <div class="input-group">
-                                        <span class="input-group-text" id="l-ins">L ins</span>
-                                        <input type="text" class="form-control" aria-describedby="l-ins">
-                                        <span class="input-group-text" id="l-ins">mm</span>
-                                    </div>
-                                </td>
-                                <td colspan="2">
-                                    <div class="input-group">
-                                        <span class="input-group-text" id="l-cor">L cor</span>
-                                        <input type="text" class="form-control" aria-describedby="l-cor">
-                                        <span class="input-group-text" id="l-cor">mm</span>
-                                    </div>
-                                </td>
-                                <td><input type="radio" name="horloge-radio"></td>
-                                <td><input type="radio" name="horloge-radio"></td>
-                            </tr>
+                        <table class="table table-striped table-bordered align-middle report-table ">
+                            <thead>
+                                <tr>
+                                    <th rowspan="2" scope="col" class="text-center align-middle ">CONTROLE</th>
+                                    <th rowspan="2" scope="col" class="text-center align-middle">VALEUR</th>
+                                    <th colspan="2" class="text-center ">EMT</th>
+                                    <th colspan="2">CONFORMITE</th>
+                                </tr>
+                                <tr>
+                                    <th class="text-center ">VAI</th>
+                                    <th class="text-center ">VP</th>
+                                    <th>OUI</th>
+                                    <th>NON</th>
+                                </tr>
+                            </thead>
+                            <tbody class="table-group-divider">
+                                <tr>
+                                    <th scope="row">Pré-requis</th>
+                                    <td colspan="3">Contrôle des conditions normales d'essai</td>
+                                    <td><input type="radio" name="prerequis-radio"></td>
+                                    <td><input type="radio" name="prerequis-radio"></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Examen administratif</th>
+                                    <td colspan="3">Contrôle administratif</td>
+                                    <td><input type="radio" name="administratif-radio"></td>
+                                    <td><input type="radio" name="administratif-radio"></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Plombages</th>
+                                    <td colspan="3">Contrôle des plombages de l'installation et du tachygraphe</td>
+                                    <td><input type="radio" name="plombages-radio"></td>
+                                    <td><input type="radio" name="plombages-radio"></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Plaquette d'installation</th>
+                                    <td colspan="3">Contrôle de la plaquette d'installation et de son plombage</td>
+                                    <td><input type="radio" name="plaquette-radio"></td>
+                                    <td><input type="radio" name="plaquette-radio"></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Horloge</th>
+                                    <td><input type="text"></td>
+                                    <td colspan="2">2min /jou 10min/7</td>
+                                    <td><input type="radio" name="horloge-radio"></td>
+                                    <td><input type="radio" name="horloge-radio"></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Distance (1000m)</th>
+                                    <td><input type="text"></td>
+                                    <td>+2%</td>
+                                    <td>+4%</td>
+                                    <td><input type="radio" name="distance-radio"></td>
+                                    <td><input type="radio" name="distance-radio"></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Tests de vitesse</th>
+                                    <td><input type="text"></td>
+                                    <td>+4 Km/h</td>
+                                    <td>+6 Km/h</td>
+                                    <td><input type="radio" name="vitesse-radio"></td>
+                                    <td><input type="radio" name="vitesse-radio"></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Test d'activité</th>
+                                    <td colspan="3">Contrôle de l'activité sur le disque d'essai</td>
+                                    <td><input type="radio" name="activity-radio"></td>
+                                    <td><input type="radio" name="activity-radio"></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">[La circonférence « | « des roues motrices</th>
+                                    <td>
+                                        <div class="input-group">
+                                            <span class="input-group-text" id="l-ins">L ins</span>
+                                            <input type="text" class="form-control" aria-describedby="l-ins">
+                                            <span class="input-group-text" id="l-ins">mm</span>
+                                        </div>
+                                    </td>
+                                    <td colspan="2">
+                                        <div class="input-group">
+                                            <span class="input-group-text" id="l-cor">L cor</span>
+                                            <input type="text" class="form-control" aria-describedby="l-cor">
+                                            <span class="input-group-text" id="l-cor">mm</span>
+                                        </div>
+                                    </td>
+                                    <td><input type="radio" name="horloge-radio"></td>
+                                    <td><input type="radio" name="horloge-radio"></td>
+                                </tr>
 
-                            <tr>
-                                <th scope="row">Le coefficient W du vehicule</th>
-                                <td>
-                                    <div class="input-group">
-                                        <span class="input-group-text" id="w-ins">W ins</span>
-                                        <input type="text" class="form-control" aria-describedby="w-ins">
-                                        <span class="input-group-text" id="w-ins">imp/km</span>
-                                    </div>
-                                </td>
-                                <td colspan="2">
-                                    <div class="input-group">
-                                        <span class="input-group-text" id="w-cor">W cor</span>
-                                        <input type="text" class="form-control" aria-describedby="w-cor">
-                                        <span class="input-group-text" id="w-cor">imp/km</span>
-                                    </div>
-                                </td>
-                                <td><input type="radio" name="horloge-radio"></td>
-                                <td><input type="radio" name="horloge-radio"></td>
-                            </tr>
+                                <tr>
+                                    <th scope="row">Le coefficient W du vehicule</th>
+                                    <td>
+                                        <div class="input-group">
+                                            <span class="input-group-text" id="w-ins">W ins</span>
+                                            <input type="text" class="form-control" aria-describedby="w-ins">
+                                            <span class="input-group-text" id="w-ins">imp/km</span>
+                                        </div>
+                                    </td>
+                                    <td colspan="2">
+                                        <div class="input-group">
+                                            <span class="input-group-text" id="w-cor">W cor</span>
+                                            <input type="text" class="form-control" aria-describedby="w-cor">
+                                            <span class="input-group-text" id="w-cor">imp/km</span>
+                                        </div>
+                                    </td>
+                                    <td><input type="radio" name="horloge-radio"></td>
+                                    <td><input type="radio" name="horloge-radio"></td>
+                                </tr>
 
-                            <tr>
-                                <th scope="row">La constante K du Chronotachygraphe</th>
-                                <td>
-                                    <div class="input-group">
-                                        <span class="input-group-text" id="k-ins">K ins</span>
-                                        <input type="text" class="form-control" aria-describedby="k-ins">
-                                        <span class="input-group-text" id="k-ins">imp/km</span>
-                                    </div>
-                                </td>
-                                <td colspan="2">
-                                    <div class="input-group">
-                                        <span class="input-group-text" id="k-cor">K cor</span>
-                                        <input type="text" class="form-control" aria-describedby="k-cor">
-                                        <span class="input-group-text" id="k-cor">mm</span>
-                                    </div>
-                                </td>
-                                <td><input type="radio" name="horloge-radio"></td>
-                                <td><input type="radio" name="horloge-radio"></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </ng-template>
+                                <tr>
+                                    <th scope="row">La constante K du Chronotachygraphe</th>
+                                    <td>
+                                        <div class="input-group">
+                                            <span class="input-group-text" id="k-ins">K ins</span>
+                                            <input type="text" class="form-control" aria-describedby="k-ins">
+                                            <span class="input-group-text" id="k-ins">imp/km</span>
+                                        </div>
+                                    </td>
+                                    <td colspan="2">
+                                        <div class="input-group">
+                                            <span class="input-group-text" id="k-cor">K cor</span>
+                                            <input type="text" class="form-control" aria-describedby="k-cor">
+                                            <span class="input-group-text" id="k-cor">mm</span>
+                                        </div>
+                                    </td>
+                                    <td><input type="radio" name="horloge-radio"></td>
+                                    <td><input type="radio" name="horloge-radio"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </ng-template>
+                </div>
             </div>
         </div>
     </div>
-</div>
 
 
-<div class="row">
-	<div class="col-10">
-	</div>
-    <div class="col-2">
-        <button class="btn btn-primary btn-lg" routerLink="/report"> Generate PDF</button>
+    <div class="row">
+        <div class="col-1">
+            <button class="btn btn-primary btn-lg mt-3 float-start " routerLink="/verification"> Back</button>
+        </div>
+        <div class="col-8">
+        </div>
+        <div class="col-3 ">
+            <button class="btn btn-primary btn-lg mt-3 float-end  " routerLink="/report"> Generate PDF</button>
+        </div>
     </div>
-</div>
+
+</app-main-template>

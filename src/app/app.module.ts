@@ -27,6 +27,7 @@ import { ReportComponent } from './components/report/report.component';
 import { NewCustomerComponent } from './components/customer/new-customer/new-customer.component';
 import { SearchCustomerComponent } from './components/customer/search-customer/search-customer.component';
 import { CustomerSelectionComponent } from './components/customer/customer-selection/customer-selection.component';
+import { MainTemplateComponent } from './shared/main-template/main-template.component';
 
 @NgModule({
   declarations: [
@@ -53,7 +54,8 @@ import { CustomerSelectionComponent } from './components/customer/customer-selec
     ReportComponent,
     NewCustomerComponent,
     SearchCustomerComponent,
-    CustomerSelectionComponent
+    CustomerSelectionComponent,
+    MainTemplateComponent
   ],
   imports: [
     BrowserModule,
